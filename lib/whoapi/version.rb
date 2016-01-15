@@ -1,3 +1,3 @@
-module Whoapi
+module WhoAPI
   VERSION = "0.1.0"
 end

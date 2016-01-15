@@ -1,5 +1,6 @@
 require "whoapi/version"
+require "whoapi/request"
 
-module Whoapi
+module WhoAPI
   # Your code goes here...
 end
