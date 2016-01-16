@@ -5,7 +5,7 @@ module WhoAPI
       @params = { apikey: api_key }
     end
 
-    def domain_taken?(domain_name)
+    def domain_availability(domain_name)
        request('taken', { domain: domain_name })
     end
 

@@ -9,7 +9,7 @@ describe 'WhoAPI::Client.domain_availability' do
 
   it 'gets the domain availability back' do
     VCR.use_cassette("domain_availability") do
-      expect(client.domain_taken?('whoapi.com')).to eq(output)
+      expect(client.domain_availability('whoapi.com')).to eq(output)
     end
   end
 
