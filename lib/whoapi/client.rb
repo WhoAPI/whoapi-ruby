@@ -1,8 +1,3 @@
-
-require 'uri'
-require 'json'
-require_relative 'request'
-
 module WhoAPI
   class Client
 
@@ -10,16 +5,15 @@ module WhoAPI
       @params = { apikey: api_key }
     end
 
-    def taken?(domain_name)
-      result = request('taken', { domain: domain_name })
-      result == '1' ? true : false
+    def domain_taken?(domain_name)
+       request('taken', { domain: domain_name })
     end
 
-    def blacklist(domain_name)
+    def blacklist_info(domain_name)
       request('blacklist', { domain: domain_name })
     end
 
-    def whois(domain_name)
+    def whois_info(domain_name)
       request('whois', { domain: domain_name })
     end
 
@@ -31,7 +25,7 @@ module WhoAPI
       request('social', { domain: domain_name })
     end
 
-    def meta(domain_name)
+    def meta_info(domain_name)
       request('meta', { domain: domain_name })
     end
 
@@ -39,19 +33,19 @@ module WhoAPI
       request('dnszone', { domain: domain_name })
     end
 
-    def ranks(domain_name, fullurl = nil)
-      request('ranks', build_params(domain_name, :fullurl, fullurl))
+    def ranking_info(domain_name, full_url = nil)
+      request('ranks', build_params(domain_name, :fullurl, full_url))
     end
 
-    def screenshot(domain_name, fullurl = nil)
-      request('screenshot', build_params(domain_name, :fullurl, fullurl))
+    def screenshot(domain_name, full_url = nil)
+      request('screenshot', build_params(domain_name, :fullurl, full_url))
     end
 
-    def hostname(domain_name, ip = nil)
+    def hostname_info(domain_name, ip = nil)
       request('hostname', build_params(domain_name, :ip, ip))
     end
 
-    def geo(domain_name, ip = nil)
+    def geo_data(domain_name, ip = nil)
       request('geo', build_params(domain_name, :ip, ip))
     end
 

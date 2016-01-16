@@ -1,8 +1,7 @@
-require 'httparty'
-require_relative 'error'
-
 module WhoAPI
   class Request
+    include WhoAPI::Symbolize
+
     BASE_URL = 'api.whoapi.com'
 
     def initialize(type, params)
@@ -11,13 +10,18 @@ module WhoAPI
     end
 
     def run
-      resp = HTTParty.get("http://#{BASE_URL}/#{query}")
+      resp = call
       json = JSON.parse(resp.body)
       check_response(resp, json)
-      json
+      json.delete('status')
+      symbolize_recursive(json)
     end
 
     private
+
+    def call
+      HTTParty.get("http://#{BASE_URL}/#{query}")
+    end
 
     def check_response(resp, json)
       raise WhoAPI::Error.new("HTTP #{resp.code}", json) if resp.code != 200
