@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.whoapi.com/?apikey=fake&domain=whoapi.com&ip=1.2.3.4&r=hostname
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.0
+      Date:
+      - Sat, 16 Jan 2016 10:36:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET
+    body:
+      encoding: UTF-8
+      string: '{"status":"0","ip":null,"basedomain":null,"hostname":null}'
+    http_version:
+  recorded_at: Sat, 16 Jan 2016 10:36:58 GMT
+recorded_with: VCR 3.0.1

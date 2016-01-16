@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.whoapi.com/?apikey=fake&domain=whoapi.com&r=blacklist
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.0
+      Date:
+      - Sat, 16 Jan 2016 10:35:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET
+    body:
+      encoding: UTF-8
+      string: '{"status":"0","ip":"52.32.117.162","blacklisted":"0","blacklists":[{"tracker":"surbl.org","blacklisted":"0"},{"tracker":"barracudacentral.org","blacklisted":"0"},{"tracker":"sorbs.net","blacklisted":"0"},{"tracker":"spamhaus.org","blacklisted":"0"}]}'
+    http_version:
+  recorded_at: Sat, 16 Jan 2016 10:36:53 GMT
+recorded_with: VCR 3.0.1

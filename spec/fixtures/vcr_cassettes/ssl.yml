@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.whoapi.com/?apikey=fake&domain=whoapi.com&r=cert
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.0
+      Date:
+      - Sat, 16 Jan 2016 10:36:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET
+    body:
+      encoding: UTF-8
+      string: '{"status":"0","certondomain":true,"category":"Private Organization","organization":"WhoAPI
+        Inc.","street":"444 Castro street","city":"Mountain View","state":"California","postalcode":"94041","country":"US","other":["US","Delaware"],"issuer":"COMODO
+        CA Limited","date_issued":"2016-01-11 00:00:00","date_expires":"2017-03-11
+        23:59:59"}'
+    http_version:
+  recorded_at: Sat, 16 Jan 2016 10:37:20 GMT
+recorded_with: VCR 3.0.1

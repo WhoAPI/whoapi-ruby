@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.whoapi.com/?apikey=fake&domain=whoapi.com&r=dnszone
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.0
+      Date:
+      - Sat, 16 Jan 2016 10:35:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - POST, GET
+    body:
+      encoding: UTF-8
+      string: '{"status":"0","ip":"52.32.117.162","mx":[{"priority":"1","name":"aspmx.l.google.com"},{"priority":"5","name":"alt1.aspmx.l.google.com"},{"priority":"5","name":"alt2.aspmx.l.google.com"},{"priority":"10","name":"aspmx2.googlemail.com"},{"priority":"10","name":"aspmx3.googlemail.com"},{"priority":"10","name":"aspmx4.googlemail.com"},{"priority":"10","name":"aspmx5.googlemail.com"}],"arecord":["52.32.117.162"],"soa":{"nameserver":"ns1.first-ns.de","email":"postmaster@robot.first-ns.de","serial_number":"2015112000","refresh":"14400","retry":"1800","expire":"604800","min_ttl":"86400"},"nameservers":["ns1.first-ns.de.","robotns2.second-ns.de.","robotns3.second-ns.com."]}'
+    http_version:
+  recorded_at: Sat, 16 Jan 2016 10:36:54 GMT
+recorded_with: VCR 3.0.1
