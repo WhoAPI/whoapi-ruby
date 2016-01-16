@@ -10,6 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["thi.denizet@gmail.com"]
 
   spec.summary       = %q{Wrapper for the WhoAPI service.}
+  spec.description   = %q{WhoAPI.com offers a range of services allowing the querying of domain name data. Track everything and never miss a renewal anymore (domain name, certificates, blacklists, etc).}
   spec.homepage      = "http://whoapi.com"
   spec.license       = "MIT"
 
@@ -22,6 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "webmock", "~> 1.22.3"
-  spec.add_development_dependency "vcr", "~> 3.0.1"
+  spec.add_development_dependency "webmock", "~> 1.22"
+  spec.add_development_dependency "vcr", "~> 3.0"
 end
