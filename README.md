@@ -33,7 +33,7 @@ whoapi.domain_availability('whoapi.com')
 
 This method will return the following hash:
 
-```json
+```ruby
 { taken: 1 }
 ```
 
@@ -51,19 +51,19 @@ All the following methods are accessible on a `WhoAPI::Client` instance.
 
 #### List of available methods
 
-1. Domain Availability: `#domain_availability(domain_name)`
-2. Email Blacklisting: `#blacklist_info(domain_name)`
-3. Whois: `#whois_info(domain_name)`
-4. SSL: `#ssl_info(domain_name)`
-5. Social: `#social_availability(domain_name)`
-6. Ranks: `#ranking_info(domain_name, full_url = nil)`
-7. Meta Data: `#meta_info(domain_name)`
-8. DNS Zone: `#dns_zone(domain_name)`
-9. Screenshot: `#screenshot(domain_name, full_url = nil)`
-10. Hostname: `#hostname_info(domain_name, ip = nil)`
-11. Geo Location: `#geo_data(domain_name, ip = nil)`
+1. [Domain Availability](#availability): `#domain_availability(domain_name)`
+2. [Email Blacklisting](#blacklist): `#blacklist_info(domain_name)`
+3. [Whois](#whois): `#whois_info(domain_name)`
+4. [SSL](#ssl): `#ssl_info(domain_name)`
+5. [Social](#social): `#social_availability(domain_name)`
+6. [Ranks](#ranks): `#ranking_info(domain_name, full_url = nil)`
+7. [Meta Data](#meta): `#meta_info(domain_name)`
+8. [DNS Zone](#dns): `#dns_zone(domain_name)`
+9. [Screenshot](#screenshot): `#screenshot(domain_name, full_url = nil)`
+10. [Hostname](#hostname): `#hostname_info(domain_name, ip = nil)`
+11. [Geo Location](#geo): `#geo_data(domain_name, ip = nil)`
 
-#### 1. Domain Availability
+#### <a name="availability"></a> 1. Domain Availability
 
 Check domain availability for registration.
 
@@ -85,7 +85,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/domain-availability).
 
-#### 2. Email Blacklisting
+#### 2. <a name="blacklist"></a> Email Blacklisting
 
 Status of domain name and it's IP address on all the popular email blacklists.
 
@@ -126,7 +126,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/blacklist).
 
-#### 3. Whois
+#### 3. <a name="whois"></a> Whois
 
 Structured and parsed raw WHOIS data such as domain registration & expiry date, owner contact details, nameservers, registrar information etc.
 
@@ -158,7 +158,7 @@ Partial Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/whois).
 
-#### 4. SSL
+#### 4. <a name="ssl"></a> SSL
 
 Detailed domain certificate information.
 
@@ -193,7 +193,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/ssl).
 
-#### 5. Social
+#### 5. <a name="social"></a> Social
 
 Domain name availability status on popular social networks.
 
@@ -222,7 +222,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/social).
 
-#### 6. Ranks
+#### 6. <a name="ranks"></a> Ranks
 
 Domain rank on popular systems like Google PageRank and Alexa.
 
@@ -252,7 +252,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/ranks).
 
-#### 7. Meta Data
+#### 7. <a name="meta"></a> Meta Data
 
 Domain content meta tags: title&description.
 
@@ -277,7 +277,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/meta).
 
-#### 8. DNS Zone
+#### 8. <a name="dns"></a> DNS Zone
 
 Complete DNS Zone record in a structured hash.
 
@@ -318,7 +318,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/dns-zone).
 
-#### 9. Screenshot
+#### 9. <a name="screenshot"></a> Screenshot
 
 This method generates website screenshots in actual full vertical size and a website thumbnail.
 
@@ -346,7 +346,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/screenshot).
 
-#### 10. Hostname
+#### 10. <a name="hostname"></a> Hostname
 
 Get domain/server hostname.
 
@@ -373,7 +373,7 @@ Output
 
 Read more about this endpoint [in the WhoAPI documentation](https://whoapi.com/index.php/documentation/api/hostname).
 
-#### 11. Geo Location
+#### 11. <a name="geo"></a> Geo Location
 
 Domain or IP geolocation.
 

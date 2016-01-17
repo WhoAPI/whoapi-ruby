@@ -7,7 +7,6 @@ Gem::Specification.new do |spec|
   spec.name          = "whoapi"
   spec.version       = WhoAPI::VERSION
   spec.authors       = ["Thibault Denizet"]
-  spec.email         = ["thi.denizet@gmail.com"]
 
   spec.summary       = %q{Wrapper for the WhoAPI service.}
   spec.description   = %q{WhoAPI.com offers a range of services allowing the querying of domain name data. Track everything and never miss a renewal anymore (domain name, certificates, blacklists, etc).}
