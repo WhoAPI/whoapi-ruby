@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Wrapper for the WhoAPI service.}
   spec.description   = %q{WhoAPI.com offers a range of services allowing the querying of domain name data. Track everything and never miss a renewal anymore (domain name, certificates, blacklists, etc).}
-  spec.homepage      = "http://whoapi.com"
+  spec.homepage      = "https://github.com/whoapi/whoapi-ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
